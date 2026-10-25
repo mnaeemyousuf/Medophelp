@@ -186,3 +186,41 @@ node tools/manuals/role-matrix.mjs
 * Configure an SMS provider and verify delivery with a test number.
 * Remove all demo accounts and data. Never run `npm run seed` against production.
 * Complete the items in `docs/release_readiness_report.md`.
+
+## 12. Deploying a demo to Render
+
+The app runs on Render as **one Node web service**: the API serves the built web app from the same origin, so the SameSite=Strict session cookies work. Separate `*.onrender.com` hosts count as different sites and would block them.
+
+**Database.** Render has no managed MongoDB, and Medophelp needs a MongoDB **replica set** for transactions. Use MongoDB Atlas; the free M0 cluster is a replica set. Put the Atlas cluster in the region nearest the Render service (e.g. Render Singapore ↔ Atlas AWS ap-southeast-1). In Atlas, allow access from Render: Network Access → `0.0.0.0/0`, or Render's outbound IPs on paid plans.
+
+| Setting | Value |
+|---|---|
+| Runtime | Node (version from `engines`: ≥ 22.12) |
+| Build command | `npm ci --include=dev && npm run build` |
+| Start command | `npm start` |
+| Health check path | `/api/health` |
+
+Environment variables:
+
+| Key | Value |
+|---|---|
+| `NODE_ENV` | `production` |
+| `TZ` | `Asia/Karachi` |
+| `MONGODB_URI` | Atlas connection string, including the database name, e.g. `mongodb+srv://USER:PASSWORD@cluster.xxxx.mongodb.net/medophelp?retryWrites=true&w=majority`. Enter it yourself in the Render dashboard |
+| `JWT_ACCESS_SECRET` | 48+ random characters |
+| `COOKIE_SECURE` | `true` |
+| `CORS_ORIGINS` | the service URL, e.g. `https://medophelp.onrender.com` |
+
+**Demo data.** Seeding refuses to run with `NODE_ENV=production`. To load the synthetic demo data into Atlas, run the seed once from your own machine against the Atlas URI. Do it before real use only, because seeding **drops the database**:
+
+```powershell
+cd server; $env:TZ="Asia/Karachi"; $env:MONGODB_URI="<atlas-uri>"; $env:SEED_DEMO_PASSWORD="<choose one>"; $env:JWT_ACCESS_SECRET=(node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"); npx tsx src/seed/run.ts
+```
+
+The JWT value here only satisfies start-up validation; it is not the one the Render service uses. Re-seed on the morning of a demo, so that "today's" queues have patients.
+
+**Free-plan limits.**
+* The service sleeps after about 15 minutes idle; the first request then takes up to a minute.
+* Background jobs (reminders, stock alerts) only run while it is awake.
+* The disk is ephemeral, so uploaded documents are lost on redeploy or restart. Use a paid plan with a persistent disk, or object storage, before storing real documents.
+* SMS, email and push stay in demo mode unless providers are configured.

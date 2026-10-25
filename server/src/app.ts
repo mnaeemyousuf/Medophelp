@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
@@ -90,6 +93,27 @@ export function createApp() {
   app.use('/api', api);
 
   app.use('/api', notFoundHandler);
+
+  // Production: serve the built web app from the same origin as the API, so the SameSite=Strict
+  // session cookies work (separate *.onrender.com hosts count as different sites).
+  if (env.isProd || env.SERVE_CLIENT) serveClient(app);
+
   app.use(errorHandler);
   return app;
+}
+
+function serveClient(app: express.Express) {
+  const dist = env.CLIENT_DIST_DIR ? path.resolve(env.CLIENT_DIST_DIR) : fileURLToPath(new URL('../../client/dist', import.meta.url));
+  const index = path.join(dist, 'index.html');
+  if (!fs.existsSync(index)) {
+    logger.warn({ dist }, 'Client build not found; only the API is served');
+    return;
+  }
+  // Hashed bundles never change; index.html must always be revalidated to pick up new releases.
+  app.use(express.static(dist, { index: false, setHeaders: (res, file) => res.setHeader('Cache-Control', file.includes(`${path.sep}assets${path.sep}`) ? 'public, max-age=31536000, immutable' : 'no-cache') }));
+  app.get(/^\/(?!api(\/|$)).*/, (_req, res) => {
+    res.setHeader('Cache-Control', 'no-cache');
+    res.sendFile(index);
+  });
+  logger.info({ dist }, 'Serving web client');
 }

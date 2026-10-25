@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --env-file=.env src/server.ts",
-    "start": "node --env-file=.env dist/server.js",
+    "start": "node --env-file-if-exists=.env dist/server.js",
     "build": "tsup",
     "seed": "tsx --env-file=.env src/seed/run.ts",
     "migrate": "tsx --env-file=.env src/migrations/run.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "migrate:prod": "node --env-file-if-exists=.env dist/migrations/run.js"
   },
   "dependencies": {
     "@hms/shared": "0.1.0",

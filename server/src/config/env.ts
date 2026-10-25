@@ -28,6 +28,13 @@ const schema = z.object({
   SMS_API_KEY: blankAsUnset(z.string().optional()),
   SMS_SENDER_ID: blankAsUnset(z.string().max(20).optional()),
   /** Overdue-payment reminders: days after issue before the first reminder (0 disables). */
+  /** Serve client/dist from the API outside production too (e.g. a local production-like check). */
+  SERVE_CLIENT: z
+    .string()
+    .default('false')
+    .transform((v) => v === 'true'),
+  /** Override the location of the built web client (defaults to ../../client/dist from the server bundle). */
+  CLIENT_DIST_DIR: blankAsUnset(z.string().optional()),
   PAYMENT_REMINDER_DAYS: z.coerce.number().int().min(0).max(90).default(7),
 });
 
