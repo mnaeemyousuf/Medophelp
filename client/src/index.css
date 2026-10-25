@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens (RGB triplets so Tailwind opacity modifiers work).
+   Medophelp brand values — source of truth: shared/src/brand.ts. All text pairs meet WCAG AA. */
+:root {
+  --bg: 246 248 251;
+  --surface: 255 255 255;
+  --subtle: 241 245 249;
+  --border: 226 232 240;
+  --fg: 11 31 68; /* Medophelp navy, 16:1 */
+  --muted: 71 85 105; /* slate, 7.6:1 */
+  --brand: 26 86 219; /* Medophelp blue, 6.2:1 with white */
+  --brand-fg: 255 255 255;
+  --brand-soft: 224 234 255;
+  --accent: 14 165 164; /* teal: graphics / large text only */
+  --sidebar: 11 31 68;
+  --sidebar-fg: 241 245 249;
+  --sidebar-muted: 148 163 184; /* 6.3:1 on navy */
+  --danger: 220 38 38;
+  --warn: 217 119 6;
+  --ok: 22 163 74;
+  --info: 3 105 161;
+  color-scheme: light;
+}
+.dark {
+  --bg: 8 13 24;
+  --surface: 15 23 38;
+  --subtle: 22 32 52;
+  --border: 36 50 74;
+  --fg: 226 232 240;
+  --muted: 148 163 184;
+  --brand: 126 176 255;
+  --brand-fg: 8 26 58;
+  --brand-soft: 23 45 92;
+  --accent: 45 212 191;
+  --sidebar: 6 14 30;
+  --sidebar-fg: 226 232 240;
+  --sidebar-muted: 148 163 184;
+  --danger: 248 113 113;
+  --warn: 251 191 36;
+  --ok: 74 222 128;
+  --info: 96 165 250;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  @apply bg-bg text-fg antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  /* Inter's stylistic sets (body) do not apply to the display face. */
+  font-feature-settings: normal;
+  letter-spacing: -0.01em;
+}
+
+@layer components {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-1 focus-visible:ring-offset-surface;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+}

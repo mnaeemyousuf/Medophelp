@@ -1,0 +1,13 @@
+{
+  "name": "medophelp-brand-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-brand.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.1",
+    "@fontsource/plus-jakarta-sans": "^5.1.1",
+    "opentype.js": "^1.3.4"
+  }
+}

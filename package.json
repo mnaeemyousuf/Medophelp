@@ -1,0 +1,23 @@
+{
+  "name": "hms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Hospital Management System (MERN)",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "db:start": "powershell -ExecutionPolicy Bypass -File scripts/start-db.ps1",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "seed": "npm run seed -w server",
+    "migrate": "npm run migrate -w server",
+    "db:backup": "powershell -ExecutionPolicy Bypass -File scripts/backup.ps1",
+    "test": "npm run test -w server",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w server && npm run typecheck -w client",
+    "build": "npm run build -w server && npm run build -w client",
+    "lint": "eslint shared/src server/src server/tests client/src"
+  }
+}

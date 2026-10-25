@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.data/
+server/storage/
+.env
+*.log
+.DS_Store
+coverage/
+
+# Database backup archives (contain patient data)
+backups/
+
+# Local test/run artefacts
+server/.test-storage/
+tools/manuals/build/
+*.tsbuildinfo
+.claude/

@@ -1,0 +1,1 @@
+{"name":"hms-manual-tools","private":true,"type":"module","description":"Captures real screenshots of the running HMS and renders the role user manuals to PDF (uses the locally installed Edge/Chrome).","scripts":{"screenshots":"node capture.mjs","pdf":"node build-manuals.mjs"},"dependencies":{"pdfjs-dist":"^4.10.38","puppeteer-core":"^23.11.1"}}

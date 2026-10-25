@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Medophelp"><title>Medophelp</title><g transform="translate(0 0) scale(1)">
+    <defs><linearGradient id="mpg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1A56DB"/><stop offset="1" stop-color="#0EA5A4"/></linearGradient></defs>
+    <rect width="64" height="64" rx="16" fill="#FFFFFF"/>
+    <polyline points="10,41 19,41 24.5,23 32,39 39.5,23 45,41 54,41" fill="none" stroke="#1A56DB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48.5 9.5h3v4h4v3h-4v4h-3v-4h-4v-3h4z" fill="#1A56DB"/>
+  </g></svg>

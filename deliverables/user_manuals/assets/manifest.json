@@ -1,0 +1,716 @@
+{
+  "superadmin-dashboard": {
+    "title": "Executive dashboard (Super Admin)",
+    "role": "superadmin",
+    "file": "superadmin-dashboard.png",
+    "capturedAt": "2026-10-24T12:56:32.250Z"
+  },
+  "admin-users": {
+    "title": "User management",
+    "role": "superadmin",
+    "file": "admin-users.png",
+    "capturedAt": "2026-10-24T12:56:34.138Z"
+  },
+  "admin-user-create": {
+    "title": "Create user drawer",
+    "role": "superadmin",
+    "file": "admin-user-create.png",
+    "capturedAt": "2026-10-24T12:56:35.499Z"
+  },
+  "admin-roles": {
+    "title": "Roles & permissions matrix",
+    "role": "superadmin",
+    "file": "admin-roles.png",
+    "capturedAt": "2026-10-24T12:56:37.399Z"
+  },
+  "admin-settings": {
+    "title": "Hospital settings — hospital information and numbering",
+    "role": "superadmin",
+    "file": "admin-settings.png",
+    "capturedAt": "2026-10-24T12:56:39.323Z"
+  },
+  "admin-settings-catalog": {
+    "title": "Hospital settings — appointment types, payment methods, medicine categories",
+    "role": "superadmin",
+    "file": "admin-settings-catalog.png",
+    "capturedAt": "2026-10-24T12:56:40.037Z"
+  },
+  "admin-settings-delivery": {
+    "title": "Hospital settings — message delivery providers and channels",
+    "role": "superadmin",
+    "file": "admin-settings-delivery.png",
+    "capturedAt": "2026-10-24T12:56:40.811Z"
+  },
+  "admin-audit": {
+    "title": "Audit log",
+    "role": "superadmin",
+    "file": "admin-audit.png",
+    "capturedAt": "2026-10-24T12:56:42.820Z"
+  },
+  "admin-audit-detail": {
+    "title": "Audit entry with old and new values",
+    "role": "superadmin",
+    "file": "admin-audit-detail.png",
+    "capturedAt": "2026-10-24T12:56:44.104Z"
+  },
+  "global-search": {
+    "title": "Global search results",
+    "role": "superadmin",
+    "file": "global-search.png",
+    "capturedAt": "2026-10-24T12:56:49.005Z"
+  },
+  "login": {
+    "title": "Login screen",
+    "role": "all",
+    "file": "login.png",
+    "capturedAt": "2026-10-24T12:56:10.793Z"
+  },
+  "login-error": {
+    "title": "Login with an incorrect password",
+    "role": "all",
+    "file": "login-error.png",
+    "capturedAt": "2026-10-24T12:56:13.583Z"
+  },
+  "forgot-password": {
+    "title": "Forgot password screen",
+    "role": "all",
+    "file": "forgot-password.png",
+    "capturedAt": "2026-10-24T12:56:15.832Z"
+  },
+  "change-password": {
+    "title": "Change password screen",
+    "role": "all",
+    "file": "change-password.png",
+    "capturedAt": "2026-10-24T12:56:19.489Z"
+  },
+  "my-workspace": {
+    "title": "My workspace — clock in/out and attendance calendar",
+    "role": "staff",
+    "file": "my-workspace.png",
+    "capturedAt": "2026-10-24T12:56:21.635Z"
+  },
+  "my-workspace-leave": {
+    "title": "My workspace — leave balances and requests",
+    "role": "staff",
+    "file": "my-workspace-leave.png",
+    "capturedAt": "2026-10-24T12:56:22.827Z"
+  },
+  "my-workspace-apply-leave": {
+    "title": "Apply for leave dialog",
+    "role": "staff",
+    "file": "my-workspace-apply-leave.png",
+    "capturedAt": "2026-10-24T12:56:24.257Z"
+  },
+  "my-workspace-payslips": {
+    "title": "My workspace — payslips",
+    "role": "staff",
+    "file": "my-workspace-payslips.png",
+    "capturedAt": "2026-10-24T12:56:25.448Z"
+  },
+  "notifications": {
+    "title": "Notification history",
+    "role": "all",
+    "file": "notifications.png",
+    "capturedAt": "2026-10-24T12:56:27.193Z"
+  },
+  "admin-dashboard": {
+    "title": "Hospital overview dashboard",
+    "role": "admin",
+    "file": "admin-dashboard.png",
+    "capturedAt": "2026-10-24T12:56:56.359Z"
+  },
+  "admin-departments": {
+    "title": "Departments & services",
+    "role": "admin",
+    "file": "admin-departments.png",
+    "capturedAt": "2026-10-24T12:56:58.134Z"
+  },
+  "admin-services": {
+    "title": "Services & prices",
+    "role": "admin",
+    "file": "admin-services.png",
+    "capturedAt": "2026-10-24T12:56:59.331Z"
+  },
+  "admin-staff": {
+    "title": "Doctors & nurses directory",
+    "role": "admin",
+    "file": "admin-staff.png",
+    "capturedAt": "2026-10-24T12:57:01.227Z"
+  },
+  "reports-catalogue": {
+    "title": "Report centre",
+    "role": "admin",
+    "file": "reports-catalogue.png",
+    "capturedAt": "2026-10-24T12:57:03.175Z"
+  },
+  "reports-revenue": {
+    "title": "Revenue by department report with chart and export buttons",
+    "role": "admin",
+    "file": "reports-revenue.png",
+    "capturedAt": "2026-10-24T12:57:08.607Z"
+  },
+  "reports-attendance": {
+    "title": "Staff attendance report",
+    "role": "admin",
+    "file": "reports-attendance.png",
+    "capturedAt": "2026-10-24T12:57:13.249Z"
+  },
+  "reception-dashboard": {
+    "title": "Front desk dashboard",
+    "role": "reception",
+    "file": "reception-dashboard.png",
+    "capturedAt": "2026-10-24T12:57:19.794Z"
+  },
+  "reception-patients": {
+    "title": "Patient search and list",
+    "role": "reception",
+    "file": "reception-patients.png",
+    "capturedAt": "2026-10-24T12:57:22.176Z"
+  },
+  "reception-register-validation": {
+    "title": "Registration form showing validation messages",
+    "role": "reception",
+    "file": "reception-register-validation.png",
+    "capturedAt": "2026-10-24T12:57:25.906Z"
+  },
+  "reception-register-form": {
+    "title": "Patient registration form (synthetic example)",
+    "role": "reception",
+    "file": "reception-register-form.png",
+    "capturedAt": "2026-10-24T12:57:28.662Z"
+  },
+  "reception-register-result": {
+    "title": "Newly registered patient profile with generated MRN",
+    "role": "reception",
+    "file": "reception-register-result.png",
+    "capturedAt": "2026-10-24T12:57:33.110Z"
+  },
+  "reception-book-appointment": {
+    "title": "Book appointment drawer",
+    "role": "reception",
+    "file": "reception-book-appointment.png",
+    "capturedAt": "2026-10-24T12:57:35.438Z"
+  },
+  "reception-appointments": {
+    "title": "Appointments list with check-in actions",
+    "role": "reception",
+    "file": "reception-appointments.png",
+    "capturedAt": "2026-10-24T12:57:37.383Z"
+  },
+  "reception-appointments-day": {
+    "title": "Appointments — day calendar by doctor",
+    "role": "reception",
+    "file": "reception-appointments-day.png",
+    "capturedAt": "2026-10-24T12:57:38.700Z"
+  },
+  "reception-appointments-week": {
+    "title": "Appointments — week view",
+    "role": "reception",
+    "file": "reception-appointments-week.png",
+    "capturedAt": "2026-10-24T12:57:40.044Z"
+  },
+  "reception-patient-profile": {
+    "title": "Patient profile — overview, insurance, consent and portal access",
+    "role": "reception",
+    "file": "reception-patient-profile.png",
+    "capturedAt": "2026-10-24T12:57:42.272Z"
+  },
+  "reception-er-board": {
+    "title": "Emergency board",
+    "role": "reception",
+    "file": "reception-er-board.png",
+    "capturedAt": "2026-10-24T12:57:46.021Z"
+  },
+  "reception-er-quick-registration": {
+    "title": "Emergency quick registration",
+    "role": "reception",
+    "file": "reception-er-quick-registration.png",
+    "capturedAt": "2026-10-24T12:57:47.392Z"
+  },
+  "reception-ipd-bed-board": {
+    "title": "Bed board (admissions)",
+    "role": "reception",
+    "file": "reception-ipd-bed-board.png",
+    "capturedAt": "2026-10-24T12:57:50.337Z"
+  },
+  "nurse-dashboard": {
+    "title": "Nurse dashboard",
+    "role": "nurse",
+    "file": "nurse-dashboard.png",
+    "capturedAt": "2026-10-24T12:57:57.010Z"
+  },
+  "nurse-queue": {
+    "title": "Nursing assessment queue",
+    "role": "nurse",
+    "file": "nurse-queue.png",
+    "capturedAt": "2026-10-24T12:57:59.219Z"
+  },
+  "nurse-assessment-form": {
+    "title": "Vital signs form with automatic BMI and abnormal value highlighting",
+    "role": "nurse",
+    "file": "nurse-assessment-form.png",
+    "capturedAt": "2026-10-24T12:58:04.401Z"
+  },
+  "nurse-er-case": {
+    "title": "Emergency case — triage and treatment record",
+    "role": "nurse",
+    "file": "nurse-er-case.png",
+    "capturedAt": "2026-10-24T12:58:06.854Z"
+  },
+  "nurse-ipd-admission": {
+    "title": "Inpatient admission — ward notes and vitals",
+    "role": "nurse",
+    "file": "nurse-ipd-admission.png",
+    "capturedAt": "2026-10-24T12:58:09.793Z"
+  },
+  "doctor-dashboard": {
+    "title": "Doctor dashboard — clinic, results to review, emergency alerts",
+    "role": "doctor",
+    "file": "doctor-dashboard.png",
+    "capturedAt": "2026-10-24T12:58:15.211Z"
+  },
+  "doctor-queue": {
+    "title": "Consultation queue",
+    "role": "doctor",
+    "file": "doctor-queue.png",
+    "capturedAt": "2026-10-24T12:58:17.109Z"
+  },
+  "doctor-consultation": {
+    "title": "Consultation workspace — vitals, note, diagnosis, plan, prescriptions, labs",
+    "role": "doctor",
+    "file": "doctor-consultation.png",
+    "capturedAt": "2026-10-24T12:58:21.846Z"
+  },
+  "doctor-prescription-builder": {
+    "title": "Prescription builder",
+    "role": "doctor",
+    "file": "doctor-prescription-builder.png",
+    "capturedAt": "2026-10-24T12:58:24.257Z"
+  },
+  "doctor-lab-order": {
+    "title": "Laboratory order dialog",
+    "role": "doctor",
+    "file": "doctor-lab-order.png",
+    "capturedAt": "2026-10-24T12:58:26.742Z"
+  },
+  "doctor-emr-timeline": {
+    "title": "Patient EMR — chronological timeline",
+    "role": "doctor",
+    "file": "doctor-emr-timeline.png",
+    "capturedAt": "2026-10-24T12:58:29.291Z"
+  },
+  "doctor-emr-vitals": {
+    "title": "Patient EMR — vital signs history and trend",
+    "role": "doctor",
+    "file": "doctor-emr-vitals.png",
+    "capturedAt": "2026-10-24T12:58:31.899Z"
+  },
+  "doctor-emr-notes": {
+    "title": "Patient EMR — clinical notes",
+    "role": "doctor",
+    "file": "doctor-emr-notes.png",
+    "capturedAt": "2026-10-24T12:58:34.134Z"
+  },
+  "doctor-lab-result": {
+    "title": "Verified laboratory result for review",
+    "role": "doctor",
+    "file": "doctor-lab-result.png",
+    "capturedAt": "2026-10-24T12:58:36.210Z"
+  },
+  "doctor-patient-medications": {
+    "title": "Patient medications — adherence and schedules",
+    "role": "doctor",
+    "file": "doctor-patient-medications.png",
+    "capturedAt": "2026-10-24T12:58:38.553Z"
+  },
+  "lab-dashboard": {
+    "title": "Laboratory dashboard",
+    "role": "lab",
+    "file": "lab-dashboard.png",
+    "capturedAt": "2026-10-24T12:58:43.509Z"
+  },
+  "lab-worklist": {
+    "title": "Laboratory worklist",
+    "role": "lab",
+    "file": "lab-worklist.png",
+    "capturedAt": "2026-10-24T12:58:45.377Z"
+  },
+  "lab-order-intake": {
+    "title": "Lab order — receive request and collect sample",
+    "role": "lab",
+    "file": "lab-order-intake.png",
+    "capturedAt": "2026-10-24T12:58:47.413Z"
+  },
+  "lab-result-entry": {
+    "title": "Result entry with reference ranges and automatic flags",
+    "role": "lab",
+    "file": "lab-result-entry.png",
+    "capturedAt": "2026-10-24T12:58:49.678Z"
+  },
+  "lab-test-master": {
+    "title": "Lab test master",
+    "role": "lab",
+    "file": "lab-test-master.png",
+    "capturedAt": "2026-10-24T12:58:51.597Z"
+  },
+  "lab-verify": {
+    "title": "Result verification by a second person",
+    "role": "lab",
+    "file": "lab-verify.png",
+    "capturedAt": "2026-10-24T12:58:56.882Z"
+  },
+  "lab-assign": {
+    "title": "Technician assignment and report upload",
+    "role": "lab",
+    "file": "lab-assign.png",
+    "capturedAt": "2026-10-24T12:58:59.342Z"
+  },
+  "pharmacy-dashboard": {
+    "title": "Pharmacy dashboard",
+    "role": "pharmacy",
+    "file": "pharmacy-dashboard.png",
+    "capturedAt": "2026-10-24T12:59:05.249Z"
+  },
+  "pharmacy-queue": {
+    "title": "Prescription queue",
+    "role": "pharmacy",
+    "file": "pharmacy-queue.png",
+    "capturedAt": "2026-10-24T12:59:07.616Z"
+  },
+  "pharmacy-dispense": {
+    "title": "Dispensing screen — stock check, FEFO batches, allergies",
+    "role": "pharmacy",
+    "file": "pharmacy-dispense.png",
+    "capturedAt": "2026-10-24T12:59:09.604Z"
+  },
+  "pharmacy-history": {
+    "title": "Dispensing history",
+    "role": "pharmacy",
+    "file": "pharmacy-history.png",
+    "capturedAt": "2026-10-24T12:59:12.423Z"
+  },
+  "pharmacy-controlled": {
+    "title": "Controlled medicine register",
+    "role": "pharmacy",
+    "file": "pharmacy-controlled.png",
+    "capturedAt": "2026-10-24T12:59:13.622Z"
+  },
+  "pharmacy-purchase-request": {
+    "title": "New purchase request",
+    "role": "pharmacy",
+    "file": "pharmacy-purchase-request.png",
+    "capturedAt": "2026-10-24T12:59:16.696Z"
+  },
+  "inventory-dashboard": {
+    "title": "Stores dashboard",
+    "role": "inventory",
+    "file": "inventory-dashboard.png",
+    "capturedAt": "2026-10-24T12:59:23.186Z"
+  },
+  "inventory-items": {
+    "title": "Inventory items with stock levels",
+    "role": "inventory",
+    "file": "inventory-items.png",
+    "capturedAt": "2026-10-24T12:59:27.605Z"
+  },
+  "inventory-item-detail": {
+    "title": "Item detail — batches, expiry and stock ledger",
+    "role": "inventory",
+    "file": "inventory-item-detail.png",
+    "capturedAt": "2026-10-24T12:59:29.856Z"
+  },
+  "inventory-alerts": {
+    "title": "Low-stock and expiry alerts",
+    "role": "inventory",
+    "file": "inventory-alerts.png",
+    "capturedAt": "2026-10-24T12:59:31.946Z"
+  },
+  "procurement-orders": {
+    "title": "Purchase orders",
+    "role": "inventory",
+    "file": "procurement-orders.png",
+    "capturedAt": "2026-10-24T12:59:34.623Z"
+  },
+  "procurement-po-detail": {
+    "title": "Purchase order detail",
+    "role": "inventory",
+    "file": "procurement-po-detail.png",
+    "capturedAt": "2026-10-24T12:59:36.812Z"
+  },
+  "procurement-goods-receipt": {
+    "title": "Goods receipt dialog (batch number and expiry per line)",
+    "role": "inventory",
+    "file": "procurement-goods-receipt.png",
+    "capturedAt": "2026-10-24T12:59:39.043Z"
+  },
+  "procurement-suppliers": {
+    "title": "Suppliers",
+    "role": "inventory",
+    "file": "procurement-suppliers.png",
+    "capturedAt": "2026-10-24T12:59:41.856Z"
+  },
+  "procurement-requests": {
+    "title": "Purchase requests awaiting approval",
+    "role": "inventory",
+    "file": "procurement-requests.png",
+    "capturedAt": "2026-10-24T12:59:43.759Z"
+  },
+  "accounts-dashboard": {
+    "title": "Financial dashboard",
+    "role": "accounts",
+    "file": "accounts-dashboard.png",
+    "capturedAt": "2026-10-24T12:59:49.213Z"
+  },
+  "accounts-invoices": {
+    "title": "Invoices with outstanding balances",
+    "role": "accounts",
+    "file": "accounts-invoices.png",
+    "capturedAt": "2026-10-24T12:59:51.318Z"
+  },
+  "accounts-invoice-detail": {
+    "title": "Invoice detail",
+    "role": "accounts",
+    "file": "accounts-invoice-detail.png",
+    "capturedAt": "2026-10-24T12:59:53.222Z"
+  },
+  "accounts-payment": {
+    "title": "Record payment dialog",
+    "role": "accounts",
+    "file": "accounts-payment.png",
+    "capturedAt": "2026-10-24T12:59:54.481Z"
+  },
+  "accounts-invoice-paid": {
+    "title": "Invoice with payments, receipts and refund action",
+    "role": "accounts",
+    "file": "accounts-invoice-paid.png",
+    "capturedAt": "2026-10-24T12:59:56.708Z"
+  },
+  "accounts-refund": {
+    "title": "Refund dialog",
+    "role": "accounts",
+    "file": "accounts-refund.png",
+    "capturedAt": "2026-10-24T12:59:58.790Z"
+  },
+  "accounts-claims": {
+    "title": "Insurance claims",
+    "role": "accounts",
+    "file": "accounts-claims.png",
+    "capturedAt": "2026-10-24T13:00:00.719Z"
+  },
+  "accounts-claim-detail": {
+    "title": "Insurance claim detail",
+    "role": "accounts",
+    "file": "accounts-claim-detail.png",
+    "capturedAt": "2026-10-24T13:00:02.574Z"
+  },
+  "accounts-report-outstanding": {
+    "title": "Outstanding balances report",
+    "role": "accounts",
+    "file": "accounts-report-outstanding.png",
+    "capturedAt": "2026-10-24T13:00:07.747Z"
+  },
+  "hr-dashboard": {
+    "title": "HR dashboard",
+    "role": "hr",
+    "file": "hr-dashboard.png",
+    "capturedAt": "2026-10-24T13:00:13.341Z"
+  },
+  "hr-employees": {
+    "title": "Employee directory",
+    "role": "hr",
+    "file": "hr-employees.png",
+    "capturedAt": "2026-10-24T13:00:15.337Z"
+  },
+  "hr-employee-profile": {
+    "title": "Employee profile",
+    "role": "hr",
+    "file": "hr-employee-profile.png",
+    "capturedAt": "2026-10-24T13:00:17.301Z"
+  },
+  "hr-employee-contracts": {
+    "title": "Employee contracts",
+    "role": "hr",
+    "file": "hr-employee-contracts.png",
+    "capturedAt": "2026-10-24T13:00:18.450Z"
+  },
+  "hr-employee-leave": {
+    "title": "Employee leave balances and history",
+    "role": "hr",
+    "file": "hr-employee-leave.png",
+    "capturedAt": "2026-10-24T13:00:19.652Z"
+  },
+  "hr-attendance-day": {
+    "title": "Daily attendance register",
+    "role": "hr",
+    "file": "hr-attendance-day.png",
+    "capturedAt": "2026-10-24T13:00:22.766Z"
+  },
+  "hr-attendance-summary": {
+    "title": "Monthly attendance summary",
+    "role": "hr",
+    "file": "hr-attendance-summary.png",
+    "capturedAt": "2026-10-24T13:00:24.740Z"
+  },
+  "hr-leave-approvals": {
+    "title": "Leave approvals",
+    "role": "hr",
+    "file": "hr-leave-approvals.png",
+    "capturedAt": "2026-10-24T13:00:27.312Z"
+  },
+  "hr-payroll": {
+    "title": "Payroll runs (approver view)",
+    "role": "hr",
+    "file": "hr-payroll.png",
+    "capturedAt": "2026-10-24T13:00:29.113Z"
+  },
+  "payroll-dashboard": {
+    "title": "Payroll dashboard",
+    "role": "payroll",
+    "file": "payroll-dashboard.png",
+    "capturedAt": "2026-10-24T13:00:34.196Z"
+  },
+  "payroll-new-run": {
+    "title": "Prepare a new payroll run",
+    "role": "payroll",
+    "file": "payroll-new-run.png",
+    "capturedAt": "2026-10-24T13:00:35.489Z"
+  },
+  "payroll-run-detail": {
+    "title": "Payroll run detail with department totals and payslips",
+    "role": "payroll",
+    "file": "payroll-run-detail.png",
+    "capturedAt": "2026-10-24T13:00:37.418Z"
+  },
+  "payroll-item": {
+    "title": "Employee pay breakdown",
+    "role": "payroll",
+    "file": "payroll-item.png",
+    "capturedAt": "2026-10-24T13:00:38.593Z"
+  },
+  "payroll-salary-structure": {
+    "title": "Salary structure history",
+    "role": "payroll",
+    "file": "payroll-salary-structure.png",
+    "capturedAt": "2026-10-24T13:00:41.240Z"
+  },
+  "payroll-salary-editor": {
+    "title": "Change salary drawer",
+    "role": "payroll",
+    "file": "payroll-salary-editor.png",
+    "capturedAt": "2026-10-24T13:00:43.214Z"
+  },
+  "recruitment-overview": {
+    "title": "Recruitment overview",
+    "role": "recruitment",
+    "file": "recruitment-overview.png",
+    "capturedAt": "2026-10-24T13:00:47.852Z"
+  },
+  "recruitment-jobs": {
+    "title": "Job openings",
+    "role": "recruitment",
+    "file": "recruitment-jobs.png",
+    "capturedAt": "2026-10-24T13:00:49.727Z"
+  },
+  "recruitment-job-form": {
+    "title": "New job opening form",
+    "role": "recruitment",
+    "file": "recruitment-job-form.png",
+    "capturedAt": "2026-10-24T13:00:50.885Z"
+  },
+  "recruitment-candidates": {
+    "title": "Candidate pipeline",
+    "role": "recruitment",
+    "file": "recruitment-candidates.png",
+    "capturedAt": "2026-10-24T13:00:52.707Z"
+  },
+  "recruitment-candidate": {
+    "title": "Candidate profile — interviews, evaluations and offers",
+    "role": "recruitment",
+    "file": "recruitment-candidate.png",
+    "capturedAt": "2026-10-24T13:00:54.629Z"
+  },
+  "recruitment-schedule-interview": {
+    "title": "Schedule interview dialog",
+    "role": "recruitment",
+    "file": "recruitment-schedule-interview.png",
+    "capturedAt": "2026-10-24T13:00:57.426Z"
+  },
+  "patient-dashboard": {
+    "title": "Patient portal home",
+    "role": "patient",
+    "file": "patient-dashboard.png",
+    "capturedAt": "2026-10-24T13:01:02.493Z"
+  },
+  "patient-appointments": {
+    "title": "My appointments",
+    "role": "patient",
+    "file": "patient-appointments.png",
+    "capturedAt": "2026-10-24T13:01:05.019Z"
+  },
+  "patient-book": {
+    "title": "Book an appointment",
+    "role": "patient",
+    "file": "patient-book.png",
+    "capturedAt": "2026-10-24T13:01:06.957Z"
+  },
+  "patient-records": {
+    "title": "My records — timeline",
+    "role": "patient",
+    "file": "patient-records.png",
+    "capturedAt": "2026-10-24T13:01:09.024Z"
+  },
+  "patient-prescriptions": {
+    "title": "My prescriptions",
+    "role": "patient",
+    "file": "patient-prescriptions.png",
+    "capturedAt": "2026-10-24T13:01:10.985Z"
+  },
+  "patient-lab-results": {
+    "title": "My lab results",
+    "role": "patient",
+    "file": "patient-lab-results.png",
+    "capturedAt": "2026-10-24T13:01:12.809Z"
+  },
+  "patient-bills": {
+    "title": "My bills",
+    "role": "patient",
+    "file": "patient-bills.png",
+    "capturedAt": "2026-10-24T13:01:14.538Z"
+  },
+  "patient-medicines": {
+    "title": "My medicines — today’s doses and adherence",
+    "role": "patient",
+    "file": "patient-medicines.png",
+    "capturedAt": "2026-10-24T13:01:16.488Z"
+  },
+  "patient-mobile-medicines": {
+    "title": "My medicines on a phone",
+    "role": "patient",
+    "file": "patient-mobile-medicines.png",
+    "capturedAt": "2026-10-24T13:01:33.431Z"
+  },
+  "patient-mobile-home": {
+    "title": "Patient portal home on a phone",
+    "role": "patient",
+    "file": "patient-mobile-home.png",
+    "capturedAt": "2026-10-24T13:01:49.922Z"
+  },
+  "management-dashboard": {
+    "title": "Management dashboard",
+    "role": "management",
+    "file": "management-dashboard.png",
+    "capturedAt": "2026-10-24T13:02:10.387Z"
+  },
+  "management-report-inflow": {
+    "title": "Patient inflow report",
+    "role": "management",
+    "file": "management-report-inflow.png",
+    "capturedAt": "2026-10-24T13:03:14.177Z"
+  },
+  "hr-employee-performance": {
+    "title": "Performance reviews",
+    "role": "hr",
+    "file": "hr-employee-performance.png",
+    "capturedAt": "2026-10-24T13:00:20.840Z"
+  }
+}
