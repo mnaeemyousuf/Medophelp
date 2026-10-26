@@ -58,7 +58,7 @@ This report makes no claim of regulatory compliance, clinical safety certificati
 | 4 | No user acceptance testing or usability sessions with real staff | High | Hospital: structured UAT using the role manuals |
 | 5 | SMS/email/push not configured; email and push have no adapter | Medium | Contract a PTA-compliant SMS provider; implement email adapter |
 | 6 | Single API instance only (in-process rate limiter, cache, jobs) | Medium | Redis + single job worker before scaling out |
-| 7 | Moderate advisories in react-router 6 and exceljs→uuid | Medium/Low | Plan React Router 7 upgrade |
+| 7 | Dependency advisories (npm audit, 26 Oct 2026): body-parser and multer DoS (high) **patched**; remaining: zod <4.6.6 memory exhaustion on oversized collections (high; bounded by the 1 MB request limit; fix needs Zod 4 migration), react-router 6 and exceljs→uuid (moderate) | Medium | Migrate to Zod 4; upgrade React Router 7 |
 | 8 | No browser E2E in CI, no load or formal accessibility testing; 28 lint warnings | Medium | Engineering backlog |
 | 9 | Payroll tax is a flat percentage | Medium (finance) | Configure per adviser or implement slabs |
 | 10 | English-only UI | Medium (adoption) | Urdu localisation |
