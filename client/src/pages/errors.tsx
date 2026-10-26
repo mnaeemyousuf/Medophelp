@@ -1,6 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { FileQuestion, ServerCrash, ShieldX } from 'lucide-react';
+import { CloudOff, FileQuestion, ServerCrash, ShieldX } from 'lucide-react';
 import { Button } from '@/components/ui/primitives';
 
 function ErrorScreen({ icon, code, title, message, action }: { icon: ReactNode; code: string; title: string; message: string; action?: ReactNode }) {
@@ -29,6 +29,19 @@ export const ServerErrorPage = ({ onRetry }: { onRetry?: () => void }) => (
     message="An unexpected error occurred. The problem has been logged. Please try again."
     action={<Button variant="outline" onClick={onRetry ?? (() => window.location.reload())}>Try again</Button>}
   />
+);
+
+/** Server not reachable (stopped, restarting, or a sleeping host waking up). Retries on its own too. */
+export const ServerUnavailablePage = ({ onRetry, retrying }: { onRetry: () => void; retrying?: boolean }) => (
+  <div className="flex min-h-full items-center justify-center">
+    <ErrorScreen
+      icon={<CloudOff className="h-7 w-7" />}
+      code="503"
+      title="Can’t reach the Medophelp server"
+      message="The server is not responding right now. If it was idle, it may take up to a minute to start. This page keeps trying automatically — you don’t need to sign in again."
+      action={<Button variant="outline" loading={retrying} onClick={onRetry}>Try again now</Button>}
+    />
+  </div>
 );
 
 /** Catches render errors so one broken widget never blanks the whole app. */

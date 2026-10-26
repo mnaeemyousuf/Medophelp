@@ -57,7 +57,7 @@ async function request<T>(method: string, url: string, body?: unknown, retry = t
       body: body === undefined ? undefined : isForm ? body : JSON.stringify(body),
     });
   } catch {
-    throw new ApiError(0, 'Cannot reach the server. Check your connection and try again.', 'network');
+    throw new ApiError(0, UNAVAILABLE_MESSAGE, 'server_unavailable');
   }
 
   if (res.status === 401 && retry && !url.startsWith('/auth/')) {
@@ -68,11 +68,19 @@ async function request<T>(method: string, url: string, body?: unknown, retry = t
   const type = res.headers.get('content-type') ?? '';
   const data = type.includes('json') ? await res.json() : await res.text();
   if (!res.ok) {
+    // The API always answers errors as problem+json. A bare 5xx comes from whatever sits in front of
+    // it — the dev proxy with the API stopped, or the host while the service starts or wakes up.
+    if (typeof data !== 'object' && res.status >= 500) throw new ApiError(res.status, UNAVAILABLE_MESSAGE, 'server_unavailable');
     const p = typeof data === 'object' ? data : { title: 'Unexpected error' };
     throw new ApiError(res.status, p.title ?? 'Request failed', p.code, p.details);
   }
   return data as T;
 }
+
+export const UNAVAILABLE_MESSAGE = 'The Medophelp server is not reachable right now. It may be starting up — please try again in a moment.';
+
+/** True when the server could not be reached (network down, server stopped, starting or asleep). */
+export const isServerUnavailable = (err: unknown) => err instanceof ApiError && err.code === 'server_unavailable';
 
 export const api = {
   get: <T>(url: string, params?: Query) => request<T>('GET', url + qs(params)),

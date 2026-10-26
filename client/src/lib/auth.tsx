@@ -2,11 +2,13 @@ import { createContext, useCallback, useContext, useEffect, useMemo, type ReactN
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import type { Permission, SessionUser } from '@hms/shared';
-import { api, ApiError, setSessionExpiredHandler } from './api';
+import { api, ApiError, isServerUnavailable, setSessionExpiredHandler } from './api';
 
 interface AuthState {
   user: SessionUser | null;
   loading: boolean;
+  /** The server could not be reached; the session state is unknown (not signed out). */
+  unavailable: boolean;
   can: (...anyOf: Permission[]) => boolean;
   logout: () => Promise<void>;
   refetch: () => Promise<unknown>;
@@ -17,7 +19,7 @@ const AuthContext = createContext<AuthState | null>(null);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const qc = useQueryClient();
   const navigate = useNavigate();
-  const { data, isLoading, refetch } = useQuery({
+  const { data, isLoading, refetch, failureReason, error } = useQuery({
     queryKey: ['me'],
     queryFn: async () => {
       try {
@@ -28,8 +30,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     },
     staleTime: 60_000,
-    retry: false,
+    // An unreachable server is not a sign-out: keep retrying (2 s, 4 s, 8 s … up to 15 s) so the app
+    // recovers on its own when the server is back (e.g. a sleeping host waking up).
+    retry: (_count, err) => isServerUnavailable(err),
+    retryDelay: (attempt) => Math.min(2000 * 2 ** attempt, 15_000),
   });
+  const unavailable = !data && isServerUnavailable(failureReason ?? error);
 
   useEffect(() => {
     setSessionExpiredHandler(() => {
@@ -47,7 +53,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     navigate('/login', { replace: true });
   }, [qc, navigate]);
 
-  return <AuthContext.Provider value={{ user: data ?? null, loading: isLoading, can, logout, refetch }}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ user: data ?? null, loading: isLoading && !unavailable, unavailable, can, logout, refetch }}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {

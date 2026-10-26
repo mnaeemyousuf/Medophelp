@@ -12,6 +12,7 @@ import { useAuth } from '@/lib/auth';
 import { Button, Card, Input } from '@/components/ui/primitives';
 import { Field, handleFormError } from '@/components/form/Field';
 import { BrandLogo } from '@/components/brand/Logo';
+import { ServerUnavailablePage } from './errors';
 
 function AuthShell({ title, subtitle, children }: { title: string; subtitle?: string; children: ReactNode }) {
   useEffect(() => {
@@ -47,7 +48,7 @@ function AuthShell({ title, subtitle, children }: { title: string; subtitle?: st
 }
 
 export function LoginPage() {
-  const { user } = useAuth();
+  const { user, unavailable, refetch } = useAuth();
   const qc = useQueryClient();
   const navigate = useNavigate();
   const [params] = useSearchParams();
@@ -56,6 +57,7 @@ export function LoginPage() {
   const form = useForm<z.input<typeof loginSchema>>({ resolver: zodResolver(loginSchema), defaultValues: { email: '', password: '', rememberMe: false } });
 
   if (user) return <Navigate to="/dashboard" replace />;
+  if (unavailable) return <ServerUnavailablePage onRetry={() => void refetch()} />;
 
   const onSubmit = form.handleSubmit(async (values) => {
     setError(null);

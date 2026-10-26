@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster, toast } from 'sonner';
-import { ApiError } from './lib/api';
+import { ApiError, isServerUnavailable } from './lib/api';
 import { AuthProvider } from './lib/auth';
 import { App } from './app/App';
 import { ErrorBoundary } from './pages/errors';
@@ -12,7 +12,9 @@ import './index.css';
 /** Background query failures surface as toasts; 401/403 are handled by auth and guards. */
 const reportQueryError = (err: unknown) => {
   if (err instanceof ApiError && [401, 403, 404].includes(err.status)) return;
-  toast.error(err instanceof Error ? err.message : 'Something went wrong');
+  const message = err instanceof Error ? err.message : 'Something went wrong';
+  // One toast per distinct message: repeated failures (retries, refocus) update it instead of stacking.
+  toast.error(message, { id: isServerUnavailable(err) ? 'server-unavailable' : message });
 };
 
 const queryClient = new QueryClient({
